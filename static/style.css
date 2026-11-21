@@ -1,0 +1,342 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #eef2ff;
+}
+
+
+
+
+
+/* window screen*/
+.welcome-screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+
+/* Welcome Box */
+
+.welcome-box {
+    width: 420px;
+    padding: 50px 40px;
+    text-align: center;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Puzzle Icon */
+
+.icon {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+
+/* Title */
+
+.welcome-box h1 {
+    margin: 0;
+
+    font-size: 42px;
+
+    color: #4f46e5;
+}
+
+
+/* Welcome Text */
+
+.welcome-box h2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+    font-size: 24px;
+
+    color: #333;
+}
+
+
+.welcome-box p {
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* Play Button */
+
+.play-button {
+
+    margin-top: 20px;
+
+    padding: 14px 40px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.play-button:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+/* GAME SCREEN */
+
+.game-screen {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding-top: 30px;
+
+    text-align: center;
+
+    background: #eef2ff;
+}
+
+
+.game-screen h1 {
+
+    color: #4f46e5;
+
+    font-size: 36px;
+
+    margin-bottom: 5px;
+}
+
+
+.subtitle {
+
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+
+/*SUDOKU BOARD */
+
+#board {
+
+    display: grid;
+
+    grid-template-columns: repeat(9, 48px);
+
+    grid-template-rows: repeat(9, 48px);
+
+    width: max-content;
+
+    margin: 20px auto;
+
+    background: #333;
+
+    border: 4px solid #333;
+
+    gap: 1px;
+}
+
+
+#board input {
+
+    width: 48px;
+
+    height: 48px;
+
+    border: none;
+
+    outline: none;
+
+    text-align: center;
+
+    font-size: 22px;
+
+    background: white;
+
+    color: #333;
+}
+
+
+/* Fixed numbers */
+
+#board input.fixed {
+
+    background: #d1d5db;
+
+    font-weight: bold;
+
+    color: #111827;
+}
+
+
+/* Correct */
+
+#board input.correct {
+
+    background: #bbf7d0;
+}
+
+
+/* Wrong */
+
+#board input.wrong {
+
+    background: #fecaca;
+}
+
+
+/* AI Hint */
+
+#board input.hint {
+
+    background: #fde68a;
+
+    font-weight: bold;
+}
+
+
+/* Solved */
+
+#board input.solved {
+
+    background: #dbeafe;
+
+    font-weight: bold;
+}
+
+
+/* STATUS */
+
+#status {
+
+    min-height: 28px;
+
+    margin: 15px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #4f46e5;
+}
+
+
+#status.success {
+
+    color: #16a34a;
+}
+
+
+#status.error {
+
+    color: #dc2626;
+}
+
+
+#status.hint-text {
+
+    color: #d97706;
+}
+
+
+#status.give-up {
+
+    color: #7c3aed;
+}
+
+
+/*BUTTONS*/
+
+.buttons {
+
+    margin-top: 20px;
+}
+
+
+.buttons button {
+
+    padding: 11px 18px;
+
+    margin: 5px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #4f46e5;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.buttons button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 550px) {
+
+    .welcome-box {
+
+        width: 90%;
+
+        padding: 40px 25px;
+    }
+
+    #board {
+
+        grid-template-columns: repeat(9, 35px);
+
+        grid-template-rows: repeat(9, 35px);
+    }
+
+    #board input {
+
+        width: 35px;
+
+        height: 35px;
+
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sudoku AI Game</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+   
+<!-- Window screen -->
+
+
+    <div id="welcomeScreen" class="welcome-screen">
+
+        <div class="welcome-box">
+
+            <div class="icon">🧩</div>
+
+            <h1>Sudoku AI</h1>
+
+            <h2>Welcome to Sudoku!</h2>
+
+            <p>
+                Challenge your brain and solve the Sudoku puzzle.
+            </p>
+
+            <p>
+                Need help? Our AI can help you!
+            </p>
+
+            <button class="play-button" onclick="startGame()">
+                ▶ PLAY GAME
+            </button>
+
+        </div>
+
+    </div>
+
+
+    
+<!-- Game Screen -->
+   
+
+    <div id="gameScreen" class="game-screen">
+
+        <h1>🧩 Sudoku AI</h1>
+
+        <p class="subtitle">
+            Solve the puzzle yourself or ask AI for help.
+        </p>
+
+
+        <!-- Suduko Board -->
+
+        <div id="board"></div>
+
+
+        <!-- status -->
+
+        <div id="status">
+            Welcome to Sudoku!
+        </div>
+
+
+        <!-- Buttons -->
+
+        <div class="buttons">
+
+            <button onclick="newGame()">
+                🔄 New Game
+            </button>
+
+            <button onclick="checkCell()">
+                ✓ Check
+            </button>
+
+            <button onclick="helpCell()">
+                🤖 AI Help
+            </button>
+
+            <button onclick="giveUp()">
+                🏳 Give Up
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Javascript -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
